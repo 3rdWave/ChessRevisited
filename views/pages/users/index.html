@@ -1,0 +1,61 @@
+<div class="inner cover">
+
+        <!-- Name of the game 
+    <div ng-init="addUser()">
+            <h1 class="cover-heading">Chess Revisited</h1> -->
+        <h2 class="lead">Please enter your names</h2>
+
+
+        <!-- establish names of players-->
+
+        <h4>
+            <form novalidate class="namebox simple-form" ng-submit="addUser()">
+                
+                <!-- PLAYER 1 (WHITE)-->
+                <div class="form-group">
+                <label for="player1" class="sr-only"> </label>
+                <input class="form-control" type="text" id="player1" maxLength="16" placeholder="Player 1"  ng-model="user.nameplayerone" required autofocus>
+                <label for="inputEmail1" class="sr-only"> </label>
+                <input class="form-control" type="email" id="inputEmail1" placeholder="E-mail address" ng-model="user.emailplayerone" required>
+                <img id="player1" src="resources/images/knightWhite.png" alt="first player starts with white" />
+                </div>
+                </br></br>
+
+                <!-- PLAYER 2 (BLACK)-->
+                <div class="form-group">
+                <label for="player2" class="sr-only"> </label>
+                <input class="form-control" type=”text” name=”player2” maxLength="16" placeholder="Player 2"  ng-model="user.nameplayertwo" required>
+                <label for="inputEmail2" class="sr-only"> </label>
+                <input class="form-control" type="email" id="inputEmail2" placeholder="E-mail address"  ng-model="user.emailplayertwo" required>
+                <img id="player2" src="resources/images/knightBlack.png" alt="first player starts with white" />
+                </div>
+                <!-- Confirm button -->
+                
+                <button class="btn btn-lg btn-warning" id="submitNamesButton" role="button" type="submit"></script>Confirm Names &raquo;</button>
+            
+            </form>
+        </h4>
+    </div>
+
+
+    <div class="panel panel-default" ng-init="getUsers()">
+        <div class="panel-heading">
+            <h3 class="panel-title">Registered Players</h3>
+        </div>
+        <div class="panel-body namebox">
+            <div class="row">
+                <div ng-repeat="user in users">
+                    <div class="col-md-6">
+                        <div class="col-md-6">
+                            {{user.nameplayerone}}
+                            <p>{{user.emailplayerone}}</p>
+                        </div>
+                        <div class="col-md-6">
+                            {{user.nameplayertwo}}
+                            <p>{{user.emailplayertwo}}</p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>

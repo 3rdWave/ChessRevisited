@@ -1,0 +1,231 @@
+<div class="col-lg-2">
+
+	<!-- speler namen-->
+	<div class="playernames" ng-init="getUser()">
+		<!-- Confirm button -->
+		<p><a class="btn btn-lg btn-warning startbutton" href="#" role="button">Start Game! &raquo;</a></p>
+
+
+		<!-- SPELER 1 (WIT)-->
+		<h4>
+			<img id="player1" src="resources/images/knightWhite.png" alt="first player starts with white" />
+			</br>
+			<p id="inputNameOne">{{user.nameplayerone}}</p>
+		</h4>
+
+		
+
+		<!-- SPELER 2 (ZWART)-->
+		<h4>
+			<img id="player2" src="resources/images/knightBlack.png" alt="first player starts with white" />
+			</br>
+			<p id="inputNameTwo">{{user.nameplayertwo}}</p>
+		</h4>
+	</div>
+	<br>
+</div>
+
+<div class="col-lg-8">
+
+
+
+
+
+
+	<!-- create chessboard layout a background using a table.
+			Using table headers for coordinate elements.-->
+
+	<div class="chessBoard">
+		<table id="tableID" align="center" border=1px">
+			<!-- id="chessBoardTable"-->
+			<tr id="chessBoardLetters">
+				<th></th>
+				<th>A</th>
+				<th>B</th>
+				<th>C</th>
+				<th>D</th>
+				<th>E</th>
+				<th>F</th>
+				<th>G</th>
+				<th>H</th>
+				<th></th>
+			</tr>
+
+			<tr id="chessBoardRow8">
+				<th id="chessBoardNumbers">8</th>
+				<td class="whiteSquare" id="A8"></td>
+				<td class="blackSquare" id="B8"></td>
+				<td class="whiteSquare" id="C8"><img src="resources/images/bishopBlack.png"></td>
+				<td class="blackSquare" id="D8">
+					<div ng-init="getChesspieces()">
+						<img ng-src="resources/images/{{chesspieces.image}}">
+							<img ng-src="resources/images/{{chesspiece._id}}">
+							<img src="{{chesspiece.image}}">
+							<img src="{{chesspiece._id}}">
+							{{chesspiece.name}}
+				</div>
+				</td>
+				<td class="whiteSquare" id="E8">
+					<div ng-init="getChesspieces()">
+						<div ng-repeat="chesspiece in chesspieces">
+							<img ng-src="resources/images/{{chesspiece.image}}">
+							<img ng-src="resources/images/{{chesspiece._id}}">
+							<img src={{chesspiece.image}}>
+							<img src={{chesspiece._id}}>
+							{{chesspiece.name}}
+						</div>
+						
+					</div>
+				</td>
+				<td class="blackSquare" id="F8">
+					<div ng-repeat="chesspiece in chesspieces">
+							<img ng-src="resources/images/{{chesspiece.image}}">
+							<img ng-src="resources/images/{{chesspiece._id}}">
+							<img src="resources/images/{{chesspiece.image}}">
+							<img src="resources/images/{{chesspiece._id}}">
+							{{chesspiece.name}}
+						</div>
+				</td>
+				<td class="whiteSquare" id="G8"></td>
+				<td class="blackSquare" id="H8"></td>
+				<th id="chessBoardNumbers">8</th>
+			</tr>
+
+			<tr id="chessBoardRow7">
+				<th id="chessBoardNumbers">7</th>
+				<td class="blackSquare"></td>
+				<td class="whiteSquare"></td>
+				<td class="blackSquare"></td>
+				<td class="whiteSquare"></td>
+				<td class="blackSquare"></td>
+				<td class="whiteSquare"></td>
+				<td class="blackSquare"></td>
+				<td class="whiteSquare"></td>
+				<th id="chessBoardNumbers">7</th>
+			</tr>
+
+			<tr id="chessBoardRow6">
+				<th id="chessBoardNumbers">6</th>
+				<td class="whiteSquare"></td>
+				<td class="blackSquare"></td>
+				<td class="whiteSquare"></td>
+				<td class="blackSquare"></td>
+				<td class="whiteSquare"></td>
+				<td class="blackSquare"></td>
+				<td class="whiteSquare"></td>
+				<td class="blackSquare"></td>
+				<th id="chessBoardNumbers">6</th>
+			</tr>
+
+			<tr id="chessBoardRow5">
+				<th id="chessBoardNumbers">5</th>
+				<td class="blackSquare"></td>
+				<td class="whiteSquare"></td>
+				<td class="blackSquare"></td>
+				<td class="whiteSquare"></td>
+				<td class="blackSquare"></td>
+				<td class="whiteSquare"></td>
+				<td class="blackSquare"></td>
+				<td class="whiteSquare"></td>
+				<th id="chessBoardNumbers">5</th>
+			</tr>
+
+			<tr id="chessBoardRow4">
+				<th id="chessBoardNumbers">4</th>
+				<td class="whiteSquare"></td>
+				<td class="blackSquare"></td>
+				<td class="whiteSquare"></td>
+				<td class="blackSquare"></td>
+				<td class="whiteSquare"></td>
+				<td class="blackSquare"></td>
+				<td class="whiteSquare"></td>
+				<td class="blackSquare"></td>
+				<th id="chessBoardNumbers">4</th>
+			</tr>
+
+			<tr id="chessBoardRow3">
+				<th id="chessBoardNumbers">3</th>
+				<td class="blackSquare"></td>
+				<td class="whiteSquare"></td>
+				<td class="blackSquare"></td>
+				<td class="whiteSquare"></td>
+				<td class="blackSquare"></td>
+				<td class="whiteSquare"></td>
+				<td class="blackSquare"></td>
+				<td class="whiteSquare"></td>
+				<th id="chessBoardNumbers">3</th>
+			</tr>
+
+			<tr id="chessBoardRow2">
+				<th id="chessBoardNumbers">2</th>
+				<td class="whiteSquare"></td>
+				<td class="blackSquare"></td>
+				<td class="whiteSquare"></td>
+				<td class="blackSquare"></td>
+				<td class="whiteSquare"></td>
+				<td class="blackSquare"></td>
+				<td class="whiteSquare"></td>
+				<td class="blackSquare"></td>
+				<th id="chessBoardNumbers">2</th>
+			</tr>
+
+			<tr id="chessBoardRow1">
+				<th id="chessBoardNumbers">1</th>
+				<td class="blackSquare"></td>
+				<td class="whiteSquare"></td>
+				<td class="blackSquare"></td>
+				<td class="whiteSquare"></td>
+				<td class="blackSquare"></td>
+				<div id="F1">
+					<td class="whiteSquare">hallo</td>
+				</div>
+				<td class="blackSquare" onclick="colorChanger(this);"></td>
+				<td class="whiteSquare">
+					<img onclick="colorChanger(this);" src="resources/images/knightWhite.png" />
+				</td>
+				<th id="chessBoardNumbers">1</th>
+			</tr>
+
+			<tr id="chessBoardLetters">
+				<th></th>
+				<th>A</th>
+				<th>B</th>
+				<th>C</th>
+				<th>D</th>
+				<th>E</th>
+				<th>F</th>
+				<th>G</th>
+				<th>H</th>
+				<th></th>
+			</tr>
+		</table>
+	</div>
+
+</div>
+
+<div class="col-lg-2">
+
+	<!-- log the moves in a seperate window-->
+
+	<div class="logScreen">
+		<h3>
+			Turns:
+		</h3>
+
+
+
+	</div>
+
+
+	<!-- confirm the end of the turn after the move has been selected-->
+	<br>
+	<div class="endTurn">
+		<form name="endCheck">
+
+			<p><a class="btn btn-lg btn-warning confirmbutton" href="#" role="button">&raquo; Confirm Move </a></p>
+
+		</form>
+	</div>
+</div>
+
+<script src="../client/resources/js/game.js"></script>

@@ -1,0 +1,463 @@
+/*
+ * Globals
+ */
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #fff;
+}
+
+/* Custom default button */
+.btn-default,
+.btn-default:hover,
+.btn-default:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritance from `body` */
+  background-color: #fff;
+  border: 1px solid #fff;
+}
+
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+  height: 100%;
+  background-color: #222;
+	background: url(../images/background1.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+body {
+  color: #fff;
+  /*text-align: right;*/
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+}
+
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.site-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%; /* For at least Firefox */
+  min-height: 100%;
+  -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+          box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+}
+.site-wrapper-inner {
+  display: table-cell;
+  vertical-align: top;
+}
+.cover-container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Padding for spacing */
+.inner {
+  padding: 30px;
+}
+
+
+/*
+ * Header
+ */
+.masthead-brand {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.lead{
+	text-align:center;
+}
+
+.masthead-nav > li {
+  display: inline-block;
+}
+.masthead-nav > li + li {
+  margin-left: 20px;
+}
+.masthead-nav > li > a {
+  padding-right: 0;
+  padding-left: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff; /* IE8 proofing */
+  color: rgba(255,255,255);
+  border-bottom: 2px solid transparent;
+}
+.masthead-nav > li > a:hover,
+.masthead-nav > li > a:focus {
+  background-color: transparent;
+  border-bottom-color: #fff;
+  border-bottom-color: rgba(255,255,255,.5);
+}
+.masthead-nav > .active > a,
+.masthead-nav > .active > a:hover,
+.masthead-nav > .active > a:focus {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+@media (min-width: 768px) {
+  .masthead-brand {
+    float: left;
+  }
+
+  
+  .masthead-nav {
+    float: right;
+  }
+}
+
+
+/*
+ * Cover
+ */
+
+.cover {
+  padding: 0 20px;
+}
+.cover .btn-lg {
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+
+/*
+ * Footer
+ */
+
+.mastfoot {
+  color: #999; /* IE8 proofing */
+  color: rgba(255,255,255,.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/*
+ * Affix and center
+ */
+
+@media (min-width: 768px) {
+  /* Pull out the header and footer */
+  .masthead {
+    position: fixed;
+    top: 0;
+  }
+  .mastfoot {
+    position: fixed;
+    bottom: 0;
+	text-align:center;
+	
+  }
+  /* Start the vertical centering */
+  .site-wrapper-inner {
+    vertical-align: middle;
+  }
+  /* Handle the widths */
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+  }
+}
+
+@media (min-width: 992px) {
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 1140px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+body {
+  padding-top: 100px;
+}
+
+.footer {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-top: 40px;
+  border-top: 1px solid #eee;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  background-color: transparent;
+}
+.jumbotron .btn {
+  padding: 14px 24px;
+  font-size: 21px;
+}
+
+/* Customize the nav-justified links to be fill the entire space of the .navbar */
+
+.nav-justified {
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.nav-justified > li > a {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 0;
+  font-weight: bold;
+  color: #777;
+  text-align: center;
+  background-color: #e5e5e5; /* Old browsers */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#e5e5e5));
+  background-image: -webkit-linear-gradient(top, #f5f5f5 0%, #e5e5e5 100%);
+  background-image:      -o-linear-gradient(top, #f5f5f5 0%, #e5e5e5 100%);
+  background-image:         linear-gradient(to bottom, #f5f5f5 0%,#e5e5e5 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+  background-repeat: repeat-x; /* Repeat the gradient */
+  border-bottom: 1px solid #d5d5d5;
+}
+.nav-justified > .active > a,
+.nav-justified > .active > a:hover,
+.nav-justified > .active > a:focus {
+  background-color: #ddd;
+  background-image: none;
+  -webkit-box-shadow: inset 0 3px 7px rgba(0,0,0,.15);
+          box-shadow: inset 0 3px 7px rgba(0,0,0,.15);
+}
+.nav-justified > li:first-child > a {
+  border-radius: 5px 5px 0 0;
+}
+.nav-justified > li:last-child > a {
+  border-bottom: 0;
+  border-radius: 0 0 5px 5px;
+}
+
+@media (min-width: 768px) {
+  .nav-justified {
+    max-height: 52px;
+  }
+  .nav-justified > li > a {
+    border-right: 1px solid #d5d5d5;
+    border-left: 1px solid #fff;
+  }
+  .nav-justified > li:first-child > a {
+    border-left: 0;
+    border-radius: 5px 0 0 5px;
+  }
+  .nav-justified > li:last-child > a {
+    border-right: 0;
+    border-radius: 0 5px 5px 0;
+  }
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  /* Remove the padding we set earlier */
+  .masthead,
+  .marketing,
+  .footer {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+h1 {
+	text-align: center;
+	font-size: 56px;
+}
+
+
+.playernames{
+	padding-top: 60%;
+  padding-left: 10%;
+  position:absolute;
+	display:inline;
+}
+
+.startbutton{
+
+  position:absolute;
+	top:60px;
+	left:-15%;
+	
+}
+
+.confirmbutton{
+	position: relative;
+	top:40px;
+	right:25%;
+
+}
+
+.chessBoard{
+	top:100px;
+	left:32%;
+	display:inline;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.logScreen{
+	position:absolute;
+	top:120px;
+	right:50%;
+	display:inline;
+	margin-left:relative;
+	margin-right:relative;
+}
+
+
+
+/* table layout, background colors and dimensions*/
+
+table, tr, th, td {
+  border-right: 3px solid black;
+	border-bottom: 3px solid dimgray;
+	border-left: 3px solid lightgray;
+	border-top: 3px solid white;
+	
+	text-align: center;
+}
+
+tr, th {
+  border-right: none;
+	border-bottom: none;
+	border-left: none;
+	border-top: none;
+	background-color: transparent;
+	text-align: center;
+}
+
+.clickedId{
+	background-color: #44DD44;
+}
+
+
+
+
+
+
+
+
+
+
+/*hightlights square when hovering over it with the mouse*/
+td:hover {
+	background-color: dimgrey;
+	opacity:0.5;
+}
+
+.item__title {
+			position: absolute;
+			text-shadow: 0px 2px 3px #666;
+			bottom:0;
+			margin: 0;
+			padding: 1em;
+			padding-left:1em;
+			padding-right:50%;
+			color: black;
+			font-size: 1.85em;
+			font-family: Raleway, Verdana, serif;
+			text-decoration:none;
+			line-height: 2;
+			opacity:0;
+			transition: transform 0.3s, opacity 0.3s;
+		}
+
+		.selectSquare {
+			color: black;/*#dbdbdb;*/
+			opacity:0;
+			transition: transform 0.3s, opacity 0.3s;
+		}
+
+		.select:hover .selectSquare {
+			opacity: 1;
+			background: #f2f2f2;
+			transform: translate3d(-2px, 50px, 0)
+		}
+
+
+.blackSquare{
+	background-color:#808080;
+}
+
+.whiteSquare{
+	background-color:#f2f2f2;
+}
+
+
+.square {
+    float:left;
+    position: relative;
+    width: 10%;
+    padding-bottom : 10%; /* = width for a 1:1 aspect ratio */
+    margin:1.66%;
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-size:cover; /* you change this to "contain" if you don't want the images to be cropped */
+}
+
+
+/*table{
+	align: center;
+}
+*/
+
+
+table
+{
+	padding: 0px;
+
+	border-collapse: collapse;
+	table-layout: fixed;
+
+	margin: auto;
+}
+
+td
+{
+	padding: 0px;
+	empty-cells: show;
+  cursor:pointer;
+}
+
+td div
+{
+	overflow: hidden;
+}
+
+td, th, tr {
+	height: 62px;
+	width: 62px;
+}
+
+th {
+  font-size: 20px;
+  font-style: normal;
+}
+

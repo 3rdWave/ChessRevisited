@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html lang="en" ng-app="chessApp">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="homepage project ChessR">
+    <meta name="author" content="Daniël Schermer">
+
+    <title>ChessR</title>
+
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="icon" href="resources/images/favicon.ico">
+
+
+    <!-- Custom styles for this template -->
+    <link href="resources/css/index.css" rel="stylesheet">
+    <link href="resources/css/game.css" rel="stylesheet">
+    <!--<link href="resources/css/users.css" rel="stylesheet">-->
+</head>
+
+
+<body>
+    <div class="site-wrapper">
+        <div class="site-wrapper-inner">
+            <div class="cover-container">
+                <div class="masthead clearfix">
+                    <div class="inner">
+                        <h3 class="masthead-brand">Chess Revisited</h3>
+                        <nav>
+                            <ul class="nav masthead-nav">
+                                <li><a class="active" href="#/index">Home</a></li>
+                                <li><a href="#/users">Players</a></li>
+                                <li><a href="#/game">Game</a></li>
+                            </ul>
+                        </nav>
+
+                    </div>
+                </div>
+
+<!-- Angular - inbrengen van unieke stukken in body -->
+                <div class="angular-wrapper">
+                    <div ng-view>
+                    </div>
+                </div>
+
+
+                <div class="mastfoot">
+                    <div class="inner">
+                        <p>A project by <a href="https://twitter.com/DESchermer">Daniël Schermer</a>, learning javascript code
+                            to <a href="https://www.linkedin.com/in/danielschermer?trk=hp-identity-name">find a job @coding!</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/angular/angular.js"></script>
+    <!--script src="../bower_components/angular/angular.min.js"></script-->
+    <script src="/bower_components/angular-route/angular-route.js"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/app.js"></script>
+    <script src="/routes.js"></script>
+    <script src="/resources/js/check.js"></script>
+    <!--script src="/resources/js/users.js"></script-->
+    <script src="/resources/js/game_buildboard.js"></script>
+    <script src="/resources/js/game_start.js"></script>
+    <script src="/resources/js/game_checkmoves.js"></script>
+    <script src="/resources/js/game_endturn.js"></script>
+    <script src="/resources/js/controllers/chessboardCtrl.js"></script>
+    <script src="/resources/js/controllers/chesspiecesCtrl.js"></script>
+    <script src="/resources/js/controllers/turnlogCtrl.js"></script>
+    <script src="/resources/js/controllers/usersCtrl.js"></script>
+    <script src="/resources/js/controllers/indexCtrl.js"></script>
+</body>
+
+</html>

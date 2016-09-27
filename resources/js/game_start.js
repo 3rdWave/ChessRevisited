@@ -1,0 +1,1 @@
+$(document).ready((function(){console.log('game_start loaded');})());
